@@ -1,3 +1,24 @@
+/*
+ * Droidcast
+ *
+ * Copyright 2015 Sebastian Nogara <snogaraleal@gmail.com>
+ *
+ * This file is part of Droidcast.
+ *
+ * This library is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this library.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package io.streamics.droidcast;
 
 import io.streamics.droidcast.core.decoder.Meta;
@@ -23,6 +44,54 @@ public class StreamActivity extends Activity
      */
     public StreamServiceClient getStreamClient() {
         return this.client;
+    }
+
+    /**
+     * Create <code>Activity</code> and bind <code>StreamServiceClient</code>.
+     */
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        client = new StreamServiceClient(this);
+        client.addServiceEventHandler(this);
+        client.addStreamEventHandler(this);
+        client.bind();
+    }
+
+    /**
+     * Unregister stream client when the activity becomes invisible.
+     */
+    @Override
+    public void onPause() {
+        try {
+            client.unregister();
+        } catch (StreamServiceClientException e) {
+            e.printStackTrace();
+        }
+        super.onPause();
+    }
+
+    /**
+     * Register stream client when the activity becomes visible.
+     */
+    @Override
+    public void onResume() {
+        try {
+            client.register();
+        } catch (StreamServiceClientException e) {
+            e.printStackTrace();
+        }
+        super.onResume();
+    }
+
+    /**
+     * Unbind stream client when the activity is destroyed.
+     */
+    @Override
+    public void onDestroy() {
+        client.unbind();
+        super.onDestroy();
     }
 
     /*
@@ -82,53 +151,5 @@ public class StreamActivity extends Activity
     @Override
     public void onStreamStop() {
         // To be overridden by activity
-    }
-
-    /**
-     * Create <code>Activity</code> and bind <code>StreamServiceClient</code>.
-     */
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        client = new StreamServiceClient(this);
-        client.addServiceEventHandler(this);
-        client.addStreamEventHandler(this);
-        client.bind();
-    }
-
-    /**
-     * Unregister stream client when the activity becomes invisible.
-     */
-    @Override
-    public void onPause() {
-        try {
-            client.unregister();
-        } catch (StreamServiceClientException e) {
-            e.printStackTrace();
-        }
-        super.onPause();
-    }
-
-    /**
-     * Register stream client when the activity becomes visible.
-     */
-    @Override
-    public void onResume() {
-        try {
-            client.register();
-        } catch (StreamServiceClientException e) {
-            e.printStackTrace();
-        }
-        super.onResume();
-    }
-
-    /**
-     * Unbind stream client when the activity is destroyed.
-     */
-    @Override
-    public void onDestroy() {
-        client.unbind();
-        super.onDestroy();
     }
 }
