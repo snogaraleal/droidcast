@@ -8,15 +8,15 @@ doesn't provide live meta data from Vorbis comments. Droidcast uses the
 ## Requirements
 
 The JOrbis decoding library is the only requirement. You can find a
-[JAR file]() in this repository with its corresponding license.
+[JAR file](/lib) in this repository with its corresponding license.
 
 ## Getting the droidcast JAR
 
 You have 2 options:
 
 * Download and add to classpath.
-    * Droidcast JAR [here]().
-    * You also need the [JOrbis JAR]() in your classpath.
+    * Droidcast JAR [here](/droidcast.jar).
+    * You also need the [JOrbis JAR](/lib) in your classpath.
 
 * Clone the repository and build it yourself (since an ANT `build.xml` file
   is provided).
