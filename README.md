@@ -3,7 +3,9 @@
 **Droidcast** is an Android library implementing a service for OGG Vorbis
 streaming. Although the Android media player does support OGG Vorbis, it
 doesn't provide live meta data from Vorbis comments. Droidcast uses the
-*pure Java OGG Vorbis decoder* [JOrbis](http://www.jcraft.com/jorbis/).
+*pure Java OGG Vorbis decoder* **[JOrbis](http://www.jcraft.com/jorbis/)**
+to play OGG streams, providing live stream meta data extracted from Vorbis
+comments at the same time.
 
 ## Requirements
 
