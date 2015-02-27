@@ -12,7 +12,7 @@ comments at the same time.
 The JOrbis decoding library is the only requirement. You can find a
 [JAR file](/lib) in this repository with its corresponding license.
 
-## Getting the droidcast JAR
+## Get the JAR
 
 You have 2 options:
 
@@ -29,13 +29,30 @@ You have 2 options:
     * Run `ant build`.
     * You can find the JAR file in `build/jar/`.
 
-## Using
+## Usage
 
 ### 1. Add libraries
 
 Add `jogg.jar` and `droidcast.jar` to your classpath.
 
-### 2. Communicate with the service
+### 2. Update your Android manifest
+
+Add Internet permission to your `AndroidManifest.xml`
+
+```xml
+<uses-permission android:name="android.permission.INTERNET"/>
+```
+
+Add the service to your `AndroidManifest.xml` nested to the `<application>`
+element.
+
+```xml
+<service
+    android:name="io.streamics.droidcast.service.StreamService"
+    android:process=":stream" />
+```
+
+### 3. Communicate with the service
 
 The streaming service is controlled with a `StreamServiceClient` which has to
 be bound and registered to receive messages from the service. You can use the
@@ -74,23 +91,6 @@ public class MainActivity extends StreamActivity {
         }
     }
 }
-```
-
-### 3. Update manifest
-
-Add Internet permission to your `AndroidManifest.xml`
-
-```xml
-<uses-permission android:name="android.permission.INTERNET"/>
-```
-
-Add the service to your `AndroidManifest.xml` nested to the `<application>`
-element.
-
-```xml
-<service
-    android:name="io.streamics.droidcast.service.StreamService"
-    android:process=":stream" />
 ```
 
 ## License
