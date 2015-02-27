@@ -113,7 +113,7 @@ public class StreamActivity extends Activity
         }
 
         // To be overridden by activity
-        // Always call super.onConnect() in the overridden method
+        // Always call super.onServiceConnect() in the overridden method
     }
 
     @Override
