@@ -26,6 +26,7 @@ import io.streamics.droidcast.service.StreamServiceClient;
 import io.streamics.droidcast.service.StreamServiceClientException;
 import io.streamics.droidcast.service.StreamServiceClient.ServiceEventHandler;
 import io.streamics.droidcast.service.StreamServiceClient.StreamEventHandler;
+
 import android.app.Activity;
 import android.os.Bundle;
 
