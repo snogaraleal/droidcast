@@ -39,7 +39,7 @@ import android.os.Parcelable;
 import android.os.RemoteException;
 
 /**
- * Communication interface with a <code>StreamService</code>.
+ * Communication interface with a {@code StreamService}.
  */
 public class StreamServiceClient {
     /**
@@ -166,7 +166,7 @@ public class StreamServiceClient {
     };
 
     /**
-     * Constructor for <code>StreamServiceClient</code>.
+     * Constructor for {@code StreamServiceClient}.
      */
     public StreamServiceClient(Context context, Class<?> serviceClass) {
         this.context = context;
@@ -174,8 +174,8 @@ public class StreamServiceClient {
     }
 
     /**
-     * Constructor for <code>StreamServiceClient</code> with the
-     * default service Class.
+     * Constructor for {@code StreamServiceClient} with the
+     * default service {@code Class}.
      */
     public StreamServiceClient(Context context) {
         this.context = context;

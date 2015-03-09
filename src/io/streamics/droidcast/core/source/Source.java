@@ -37,7 +37,7 @@ public class Source {
      */
     public class Stream extends FilterInputStream {
         /**
-         * Constructor for <code>Stream</code>
+         * Constructor for {@code Stream}.
          * @param connection Source URL connection
          * @throws IOException
          */
@@ -76,7 +76,7 @@ public class Source {
     private String genre;
 
     /**
-     * Constructor for creating a <code>Source</code> from URL.
+     * Constructor for creating a {@code Source} from URL.
      * @throws IOException 
      * @throws MalformedURLException 
      * @throws StreamException 

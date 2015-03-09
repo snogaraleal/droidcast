@@ -22,7 +22,7 @@
 package io.streamics.droidcast.service;
 
 /**
- * Constants for service messages
+ * Constants for service messages.
  */
 public class StreamServiceMessage {
     /**

@@ -29,7 +29,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * <code>Parcelable</code> class for stream meta data.
+ * {@code Parcelable} class for stream meta data.
  */
 public class Meta implements Parcelable {
     public static String SEPARATOR = "=";
@@ -37,13 +37,13 @@ public class Meta implements Parcelable {
     private Map<String, String> values = new HashMap<String, String>();
 
     /**
-     * Constructor for <code>StreamMeta</code>.
+     * Constructor for {@code StreamMeta}.
      */
     public Meta() {
     }
 
     /**
-     * Constructor for <code>StreamMeta</code> with Vorbis user comments.
+     * Constructor for {@code StreamMeta} with Vorbis user comments.
      * @param comments User comments
      */
     public Meta(byte[][] comments) {

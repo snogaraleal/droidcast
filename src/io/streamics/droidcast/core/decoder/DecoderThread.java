@@ -24,22 +24,21 @@ package io.streamics.droidcast.core.decoder;
 import java.io.InputStream;
 
 /**
- * <code>Decoder</code> wrapped in a thread
+ * <code>Decoder</code> wrapped in a thread.
  * 
- * 1. Create a <code>DecoderThread</code> specifying an <code>InputStream</code>
- * 2. Get the wrapped <code>Decoder</code> instance with <code>getDeocder</code>
- *    and use <code>addConsumer</code> to add stream consumers
- * 3. Call <code>start</code> to start the thread
- * 4. Call <code>stopDecoder</code> to stop the wrapped decoder causing the
- *    thread to finish
+ * 1. Create a {@code DecoderThread} specifying an {@code InputStream}.
+ * 2. Get the wrapped {@code Decoder} instance with {@code getDecoder}
+ *    and use {@code addConsumer} to add stream consumers.
+ * 3. Call {@code start} to start the thread.
+ * 4. Call {@code stopDecoder} to stop the wrapped decoder causing the
+ *    thread to finish.
  */
 public class DecoderThread extends Thread {
     private Decoder decoder;
 
     /**
-     * Constructor for <code>DecoderThread</code> taking an
-     * <code>InputStream</code> used to create the underlying
-     * <code>Decoder</code>.
+     * Constructor for {@code DecoderThread} taking an {@code InputStream}
+     * used to create the underlying {@code Decoder}.
      *
      * @param stream Source stream
      * @param decoder Stream decoder

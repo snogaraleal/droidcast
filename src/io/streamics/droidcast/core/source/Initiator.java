@@ -27,16 +27,16 @@ import java.net.MalformedURLException;
 import android.os.AsyncTask;
 
 /**
- * <code>Initiator</code> in charge of creating a <code>Source</code> from a
+ * {@code Initiator} in charge of creating a {@code Source} from a
  * specific stream URL.
  */
 public class Initiator extends AsyncTask<Void, Void, Source> {
     /**
-     * <code>Handler</code> for providing the created <code>Source</code>.
+     * {@code Handler} for providing the created {@code Source}.
      */
     public static interface Handler {
         /**
-         * Handle newly created <code>Source</code>.
+         * Handle newly created {@code Source}.
          * @param source Stream source or null if there was an error
          */
         public void onReady(Source source);
@@ -51,7 +51,7 @@ public class Initiator extends AsyncTask<Void, Void, Source> {
     private Handler handler;
 
     /**
-     * Constructor for <code>Initiator</code>.
+     * Constructor for {@code Initiator}.
      * @param url Source URL
      * @param handler Handler
      */

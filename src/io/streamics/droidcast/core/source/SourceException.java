@@ -22,7 +22,7 @@
 package io.streamics.droidcast.core.source;
 
 /**
- * Stream source error
+ * Stream source error.
  */
 public class SourceException extends Exception {
     private static final long serialVersionUID = -1937511577958810075L;

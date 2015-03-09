@@ -39,10 +39,10 @@ import com.jcraft.jorbis.Info;
  * OGG Vorbis decoder using JOrbis
  * See: http://www.jcraft.com/jorbis/
  * 
- * 1. Create a <code>Decoder</code> specifying an <code>InputStream</code>
- * 2. Use <code>addConsumer</code> to add stream consumers
- * 3. Call <code>start</code> to start the decoder
- * 4. Call <code>stop</code> to stop the decoder
+ * 1. Create a {@code Decoder} specifying an {@code InputStream}.
+ * 2. Use {@code addConsumer} to add stream consumers.
+ * 3. Call {@code start} to start the decoder.
+ * 4. Call {@code stop} to stop the decoder.
  * 
  * The decoding loop is based on the JOrbis example
  * http://www.jcraft.com/jorbis/tutorial/ExamplePlayer.java
@@ -99,8 +99,8 @@ public class Decoder {
     private static int MIN_16BIT = -32768;
 
     /**
-     * Constructor for feeding a <code>StreamDecoder</code> with an
-     * <code>InputStream</code>
+     * Constructor for feeding a {@code StreamDecoder} with an
+     * {@code InputStream}.
      * @param stream Stream
      */
     public Decoder(InputStream stream) {

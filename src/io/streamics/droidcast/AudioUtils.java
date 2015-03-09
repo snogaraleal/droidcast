@@ -29,7 +29,7 @@ import android.media.AudioTrack;
 
 public class AudioUtils {
     /**
-     * Initialize an <code>AudioTrack</code> from Vorbis <code>Info</code>.
+     * Initialize an {@code AudioTrack} from Vorbis {@code Info}.
      * @param info Vorbis info
      * @return Audio track
      */
