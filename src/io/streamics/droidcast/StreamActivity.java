@@ -31,7 +31,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 /**
- * Android <code>Activity</code> with streaming service binding and events
+ * Android {@code Activity} with streaming service binding and events
  * methods.
  */
 public class StreamActivity extends Activity
@@ -41,14 +41,14 @@ public class StreamActivity extends Activity
 
     /**
      * Get service client.
-     * @return <code>StreamServiceClient</code>
+     * @return {@code StreamServiceClient}
      */
     public StreamServiceClient getStreamClient() {
         return this.client;
     }
 
     /**
-     * Create <code>Activity</code> and bind <code>StreamServiceClient</code>.
+     * Create {@code Activity} and bind {@code StreamServiceClient}.
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {

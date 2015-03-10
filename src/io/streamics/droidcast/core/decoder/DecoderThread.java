@@ -24,7 +24,7 @@ package io.streamics.droidcast.core.decoder;
 import java.io.InputStream;
 
 /**
- * <code>Decoder</code> wrapped in a thread.
+ * {@code Decoder} wrapped in a thread.
  * 
  * 1. Create a {@code DecoderThread} specifying an {@code InputStream}.
  * 2. Get the wrapped {@code Decoder} instance with {@code getDecoder}
