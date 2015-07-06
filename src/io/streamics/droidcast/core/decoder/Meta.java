@@ -37,13 +37,13 @@ public class Meta implements Parcelable {
     private Map<String, String> values = new HashMap<String, String>();
 
     /**
-     * Constructor for {@code StreamMeta}.
+     * Constructor for {@code Meta}.
      */
-    public Meta() {
-    }
+    public Meta() {}
 
     /**
-     * Constructor for {@code StreamMeta} with Vorbis user comments.
+     * Constructor for {@code Meta} with Vorbis user comments.
+     *
      * @param comments User comments
      */
     public Meta(byte[][] comments) {
@@ -90,6 +90,7 @@ public class Meta implements Parcelable {
 
     /**
      * Get value.
+     *
      * @param key Key
      * @return Value
      */
@@ -104,12 +105,14 @@ public class Meta implements Parcelable {
 
     public static final Parcelable.Creator<Meta> CREATOR =
             new Parcelable.Creator<Meta>() {
+        @Override
         public Meta createFromParcel(Parcel in) {
             Meta meta = new Meta();
             meta.readFromParcel(in);
             return meta;
         }
 
+        @Override
         public Meta[] newArray(int size) {
             return new Meta[size];
         }

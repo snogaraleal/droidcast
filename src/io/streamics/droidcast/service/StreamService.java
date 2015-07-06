@@ -44,8 +44,8 @@ import android.os.RemoteException;
 import com.jcraft.jorbis.Info;
 
 /**
- * Service that runs a {@code StreamThread} with an {@code AudioTrack}
- * and publishes meta data to all registered clients.
+ * Service that runs a {@code DecoderThread} with an {@code AudioTrack}
+ * and publishes meta data to all registered service clients.
  */
 public class StreamService extends Service {
     /**
@@ -176,6 +176,7 @@ public class StreamService extends Service {
 
     /**
      * Broadcast message to all clients.
+     *
      * @param message Message
      */
     private void broadcast(Message message) {
@@ -214,6 +215,7 @@ public class StreamService extends Service {
 
     /**
      * Start streaming the specified URL.
+     *
      * @param url Source URL
      */
     private void start(String url) {

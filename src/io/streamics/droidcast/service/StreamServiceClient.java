@@ -184,6 +184,7 @@ public class StreamServiceClient {
 
     /**
      * Add service event handler.
+     *
      * @param handler Service event handler
      */
     public void addServiceEventHandler(ServiceEventHandler handler) {
@@ -192,6 +193,7 @@ public class StreamServiceClient {
 
     /**
      * Remove service event handler.
+     *
      * @param handler Service event handler
      */
     public void removeServiceEventHandler(ServiceEventHandler handler) {
@@ -200,6 +202,7 @@ public class StreamServiceClient {
 
     /**
      * Add stream event handler.
+     *
      * @param handler Stream event handler
      */
     public void addStreamEventHandler(StreamEventHandler handler) {
@@ -208,6 +211,7 @@ public class StreamServiceClient {
 
     /**
      * Remove stream event handler.
+     *
      * @param handler Stream event handler
      */
     public void removeStreamEventHandler(StreamEventHandler handler) {
@@ -233,6 +237,7 @@ public class StreamServiceClient {
 
     /**
      * Ensure that there is a service connection.
+     *
      * @throws StreamServiceClientException 
      */
     private void ensureConnected() throws StreamServiceClientException {
@@ -243,6 +248,7 @@ public class StreamServiceClient {
 
     /**
      * Get whether the service client is connected.
+     *
      * @return Whether the client is connected
      */
     public boolean isConnected() {
@@ -251,6 +257,7 @@ public class StreamServiceClient {
 
     /**
      * Register client.
+     *
      * @throws StreamServiceClientException 
      */
     public void register() throws StreamServiceClientException {
@@ -272,6 +279,7 @@ public class StreamServiceClient {
 
     /**
      * Unregister client.
+     *
      * @throws StreamServiceClientException 
      */
     public void unregister() throws StreamServiceClientException {
@@ -293,6 +301,7 @@ public class StreamServiceClient {
 
     /**
      * Start stream.
+     *
      * @param url Source URL
      * @throws StreamServiceClientException 
      */
@@ -316,6 +325,7 @@ public class StreamServiceClient {
 
     /**
      * Stop stream.
+     *
      * @throws StreamServiceClientException 
      */
     public void stop() throws StreamServiceClientException {
@@ -336,6 +346,7 @@ public class StreamServiceClient {
 
     /**
      * Request stream general information.
+     *
      * @throws StreamServiceClientException
      */
     public void requestInfo() throws StreamServiceClientException {
@@ -356,6 +367,7 @@ public class StreamServiceClient {
 
     /**
      * Request stream meta data.
+     *
      * @throws StreamServiceClientException
      */
     public void requestMeta() throws StreamServiceClientException {

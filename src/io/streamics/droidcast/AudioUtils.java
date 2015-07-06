@@ -21,15 +21,16 @@
 
 package io.streamics.droidcast;
 
-import com.jcraft.jorbis.Info;
-
 import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioTrack;
 
+import com.jcraft.jorbis.Info;
+
 public class AudioUtils {
     /**
      * Initialize an {@code AudioTrack} from Vorbis {@code Info}.
+     *
      * @param info Vorbis info
      * @return Audio track
      */

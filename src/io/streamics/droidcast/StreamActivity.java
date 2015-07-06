@@ -23,16 +23,14 @@ package io.streamics.droidcast;
 
 import io.streamics.droidcast.core.decoder.Meta;
 import io.streamics.droidcast.service.StreamServiceClient;
-import io.streamics.droidcast.service.StreamServiceClientException;
 import io.streamics.droidcast.service.StreamServiceClient.ServiceEventHandler;
 import io.streamics.droidcast.service.StreamServiceClient.StreamEventHandler;
-
+import io.streamics.droidcast.service.StreamServiceClientException;
 import android.app.Activity;
 import android.os.Bundle;
 
 /**
- * Android {@code Activity} with streaming service binding and events
- * methods.
+ * Android {@code Activity} bound to a streaming service.
  */
 public class StreamActivity extends Activity
     implements ServiceEventHandler, StreamEventHandler {
@@ -41,6 +39,7 @@ public class StreamActivity extends Activity
 
     /**
      * Get service client.
+     *
      * @return {@code StreamServiceClient}
      */
     public StreamServiceClient getStreamClient() {

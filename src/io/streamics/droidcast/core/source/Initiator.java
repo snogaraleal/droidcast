@@ -32,12 +32,13 @@ import android.os.AsyncTask;
  */
 public class Initiator extends AsyncTask<Void, Void, Source> {
     /**
-     * {@code Handler} for providing the created {@code Source}.
+     * {@code Handler} providing the created {@code Source}.
      */
     public static interface Handler {
         /**
          * Handle newly created {@code Source}.
-         * @param source Stream source or null if there was an error
+         *
+         * @param source Stream source or {@code null} if there was an error
          */
         public void onReady(Source source);
 
@@ -52,6 +53,7 @@ public class Initiator extends AsyncTask<Void, Void, Source> {
 
     /**
      * Constructor for {@code Initiator}.
+     *
      * @param url Source URL
      * @param handler Handler
      */

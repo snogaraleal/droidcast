@@ -38,6 +38,7 @@ public class Source {
     public class Stream extends FilterInputStream {
         /**
          * Constructor for {@code Stream}.
+         *
          * @param connection Source URL connection
          * @throws IOException
          */
@@ -77,6 +78,7 @@ public class Source {
 
     /**
      * Constructor for creating a {@code Source} from URL.
+     *
      * @throws IOException 
      * @throws MalformedURLException 
      * @throws StreamException 
@@ -100,6 +102,7 @@ public class Source {
 
     /**
      * Get stream
+     *
      * @return Stream
      */
     public Stream getStream() {
@@ -108,6 +111,7 @@ public class Source {
 
     /**
      * Get URL
+     *
      * @return URL
      */
     public String getUrl() {
@@ -116,6 +120,7 @@ public class Source {
 
     /**
      * Get content type
+     *
      * @return Content type
      */
     public String getContentType() {
@@ -124,6 +129,7 @@ public class Source {
 
     /**
      * Get stream name
+     *
      * @return Name
      */
     public String getName() {
@@ -132,6 +138,7 @@ public class Source {
 
     /**
      * Get stream genre
+     *
      * @return Genre
      */
     public String getGenre() {
