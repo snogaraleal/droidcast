@@ -1,6 +1,4 @@
 lib/android.jar
-.project
 .settings
-.classpath
 /bin/
 /build/
